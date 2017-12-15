@@ -701,7 +701,7 @@
                     this.lastToggledInput = $target;
                 }
 
-                $target.blur();
+                $target.trigger('blur');
             }, this));
 
             // Keyboard support.
@@ -711,7 +711,7 @@
                 }
 
                 if (event.keyCode === 9 && this.$container.hasClass('open')) {
-                    this.$button.click();
+                    this.$button.trigger('click');
                 }
                 else {
                     var $items = $(this.$container).find("li:not(.divider):not(.disabled) a").filter(":visible");
@@ -1714,3 +1714,4 @@
     });
 
 }(window.jQuery);
+//# sourceURL=bootstrap-multiselect.js
