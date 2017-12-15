@@ -632,7 +632,7 @@
                     }
                 }
 
-                this.$select.change();
+                this.$select.trigger('change');
                 this.updateButtonText();
 
                 if(this.options.preventInputChangeEvent) {
